@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row"  >
+
+    <a [routerLink]="backRoute"> Go Back </a>
+
+    <h2 class="page-header">Add Listing</h2>
+
+
+    <div class="container">
+      <form class="add-form" (ngSubmit)="onSubmit($event)">
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" required [(ngModel)]="listingData.title">
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" required [(ngModel)]="listingData.city">
+          </div>
+          <div class="form-group">
+            <label>Owner</label>
+            <input type="text" class="form-control" name="owner" required [(ngModel)]="listingData.owner">
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Bedrooms</label>
+            <input type="number" class="form-control" name="bedrooms" [(ngModel)]="listingData.bedrooms">
+          </div>
+          <div class="form-group">
+            <label>Type</label>
+            <select class="form-control" type="text" name="type" [(ngModel)]="listingData.type">
+              <option value="Estate">Estate</option>
+              <option value="Condo">Condo</option>
+              <option value="Apartment">Apartment</option>
+              
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Image Upload</label>
+            <input id="image" class="form-control" type="file"  >
+          </div>
+           <div class="form-group">
+            <label>Price</label>
+            <input  class="form-control" type="text" name="price" [(ngModel)]="listingData.price" >
+          </div>    
+ 
+        </div>
+         <div class="col-md-12 text-center">
+            <input type="submit" value="submit" class="btn btn-lg btn-success">
+          </div>
+      </form>
+    </div>
+
+  </div>
+ 
+</div>

@@ -1,0 +1,199 @@
+
+@import "_variable.scss";
+ 
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: $text-color;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #fff;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #8bc34a;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  color: $text-color;
+  text-align: left;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.3);
+  background: white;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+.main-wrapper{
+  min-height: 100%;
+  width: 100%;
+  .page-wrapper {
+    vertical-align: top;
+    margin-top: 61.5px;
+    // display: table;
+    // width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    // //-webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+    // //box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+    // -webkit-box-shadow: inset 0px 47px 33px -44px rgba(0,0,0,0.45);
+    // -moz-box-shadow: inset 0px 47px 33px -44px rgba(0,0,0,0.45);
+    // box-shadow: inset 0px 47px 33px -44px rgba(0,0,0,0.45);
+
+    .page-wrapper-inner {
+      vertical-align: top;
+      margin-top: 2%;
+ 
+      .cover-container {
+        margin-top: 10%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .cover{
+        h1.cover-heading{
+          font-size: $font-size-h1 + 10px;
+          font-weight: bold;
+          color: #f89406;
+        }
+        /* Padding for spacing */
+        .inner {
+          padding: 2rem;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+ 
+
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: $text-color;
+  background-color: white;
+  padding: 10px auto;
+}
+
+
+/*
+ * Affix and center
+ */
+
+
+@media (min-height: 1009px) {
+  .mastfoot {
+    //position: fixed;
+    //bottom: 80px;
+  }
+
+}
+
+@media (min-height: 1010px) {
+  .mastfoot {
+    //position: fixed;
+    //bottom: 0;
+  }
+
+}
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+
+  /* Start the vertical centering */
+  .page-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container, .page-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%;
+  }
+}
+
+.navbar-brand-header{
+  display: inline;
+  img.logo{
+    display: inline;
+    width: 50px;
+    height: 20px;
+    margin-right: 20px;
+  }
+
+}
+
+@media screen and (min-width: 768px){
+    font-size: 42px!important;
+}
+
+  .navbar-header{
+    
+    button.navbar-toggle{
+      background-color:#f3f3f3;
+      .icon-bar{
+        background-color:white;
+      }
+    }
+
+
+  }
+  .navbar-header{
+    
+  }
+  .navbar-collapse.collapse.in ,  .navbar-collapse ul{
+    background-color: #f3f3f3!important;
+  }

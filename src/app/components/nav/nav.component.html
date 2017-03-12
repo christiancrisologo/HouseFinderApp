@@ -1,0 +1,42 @@
+<nav class="nav-masthead navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand-header">
+        <span class="navbar-brand" href="#">
+          <!--<span src="assets/images/geco-logo.png" class="logo" ></span>-->  {{appTitle}}
+          <small> {{appSubTitle}}</small>
+        </span>
+      </div> 
+
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="  nav navbar-nav navbar-left">
+
+        <li *ngFor="let item of links;let i = index">
+          <a *ngIf="item.isRoute"
+            [routerLink]="item.url" class="top-bar-link" >
+            <span [attr.class]="'glyphicon ' + item.icon" *ngIf="item.icon!==''"  ></span>
+            {{item.label}}
+          </a>
+
+        </li>
+
+      </ul>
+      <ul class="  nav navbar-nav navbar-right">
+
+        <li *ngIf="!(_af.auth | async )"> <a   (click)="login()">Login</a></li> 
+        <li *ngIf="_af.auth | async " ><a    (click)="logout()">Logout</a></li> 
+
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="shadow" ></div>
+</nav>

@@ -1,0 +1,21 @@
+<section class="main-wrapper container">
+
+  <app-nav [appTitle]="appTitle" [appSubTitle]="appSubTitle"></app-nav>
+
+  <section class="row page-wrapper">
+    <div class="page-wrapper-inner">
+      <flash-messages></flash-messages>
+      <router-outlet></router-outlet>
+
+    </div>
+  </section>
+
+  <div #dialogAnchor></div>
+ 
+</section>
+<div class="mastfoot">
+  <div class="inner">
+    <p> {{appName}} <small>(ver.{{appVersion}})</small> </p>
+    <p>Copyright © 2017 All Rights Reserved | <a href="#">Christian Crisologo</a></p>
+  </div>
+</div>
